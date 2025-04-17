@@ -1,0 +1,16 @@
+: 1
+name: xtensor
+version: 0.26.0
+type: lib,binless
+language: c++
+summary: C++ tensors with broadcasting and lazy computing
+license: BSD-3-Clause license
+description-file: README.md
+package-description-file: PACKAGE-README.md
+url: https://github.com/xtensor-stack/xtensor/tree/master
+email: build2@cppget.org
+#build-error-email: user@example.org
+depends: * build2 >= 0.17.0
+depends: * bpkg >= 0.17.0
+depends: libxtl ^0.7.4
+depends: libxsimd ^8.0.4

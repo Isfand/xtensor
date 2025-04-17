@@ -1,0 +1,6 @@
+$out_root/
+{
+  include include/xtensor/
+}
+
+export $out_root/include/xtensor/$import.target

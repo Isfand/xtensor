@@ -1,0 +1,28 @@
+intf_libs = # Interface dependencies.
+import intf_libs += libxsimd%lib{xsimd}
+import intf_libs += libxtl%lib{xtl}
+#import xxxx_libs += libhello%lib{hello}
+
+lib{xtensor}: hxx{** -version} hxx{version} $intf_libs
+
+hxx{version}: in{version} $src_root/manifest
+
+# Export options.
+#
+out_pfx = [dir_path] $out_root/include/
+src_pfx = [dir_path] $src_root/include/
+
+lib{xtensor}:
+{
+  cxx.export.poptions = "-I$out_pfx" "-I$src_pfx"
+  cxx.export.libs = $intf_libs
+}
+
+# Install into the xtensor/ subdirectory of, say, /usr/include/
+# recreating subdirectories.
+#
+hxx{*}:
+{
+  install         = include/xtensor/
+  install.subdirs = true
+}

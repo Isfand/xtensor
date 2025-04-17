@@ -1,0 +1,3 @@
+import libs = xtensor%lib{xtensor}
+
+exe{driver}: {hxx cxx}{**} $libs testscript{**}

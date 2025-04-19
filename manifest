@@ -12,5 +12,5 @@ email: build2@cppget.org
 #build-error-email: user@example.org
 depends: * build2 >= 0.17.0
 depends: * bpkg >= 0.17.0
-depends: libxtl ^0.7.4
+depends: libxtl ^0.8.0
 depends: libxsimd ^8.0.4
